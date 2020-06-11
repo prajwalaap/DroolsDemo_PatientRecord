@@ -1,0 +1,13 @@
+package com.myspace.patientr;
+
+import java.lang.Number;
+
+rule "Admission"
+	dialect "mvel"
+	ruleflow-group "admission"
+	when
+		p : PatientDetails( this != null && isElligible == true )
+		r : Record( this != null && name != null )
+	then
+		r.setIsRecordExists( true );
+end

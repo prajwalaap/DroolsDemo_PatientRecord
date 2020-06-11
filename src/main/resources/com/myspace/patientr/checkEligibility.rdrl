@@ -1,0 +1,16 @@
+package com.myspace.patientr;
+
+import java.lang.Number;
+import java.time.LocalDate;
+
+rule "checkEligibility"
+	dialect "mvel"
+	ruleflow-group "eligibility"
+	when
+		p : PatientDetails( age >= 65 && firstUser == true )
+	then
+		modify( p ) {
+				setIsElligible( true ), 
+				setIsInsuredBefore( false )
+		}
+end

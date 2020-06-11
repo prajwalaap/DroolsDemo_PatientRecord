@@ -1,0 +1,24 @@
+package com.myspace.patientr;
+
+import java.lang.Boolean;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import  java.lang.String;
+
+declare PatientDetails
+age:int
+isElligible:java.lang.Boolean
+firstUser:java.lang.Boolean
+billAmt:java.math.BigDecimal
+isInsuredBefore:java.lang.Boolean
+feeAmount:java.math.BigDecimal
+insuranceCompany: java.lang.String
+end
+
+declare Record
+name:java.lang.String
+admittedOn:java.time.LocalDate
+isRecordExists:java.lang.Boolean
+end
+
+
